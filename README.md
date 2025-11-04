@@ -54,8 +54,8 @@ npm run dev
 Edit the `.env` file with your specific settings:
 
 ```env
-FABRIKAM_API_KEY=your_api_key_here
-FABRIKAM_DATABASE_URL=your_database_connection_string
+FABRIKAM_API_KEY=YOUR_API_KEY_HERE
+FABRIKAM_DATABASE_URL=YOUR_DATABASE_CONNECTION_STRING
 FABRIKAM_REGION=us-west-2
 ```
 
@@ -66,6 +66,7 @@ Once installed, access the Fabrikam dashboard at `http://localhost:3000`
 ### Quick Start Example
 
 ```javascript
+// This is a hypothetical example demonstrating the intended usage
 const Fabrikam = require('fabrikam-sdk');
 
 const client = new Fabrikam({
