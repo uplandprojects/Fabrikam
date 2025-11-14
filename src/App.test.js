@@ -1,5 +1,5 @@
 import React from 'react';
-import { render, screen } from '@testing-library/react';
+import { render, screen, fireEvent } from '@testing-library/react';
 import App from './App';
 
 describe('App', () => {
@@ -13,5 +13,30 @@ describe('App', () => {
     render(<App />);
     const headingElement = screen.getByRole('heading', { level: 1 });
     expect(headingElement).toBeInTheDocument();
+  });
+
+  test('renders dark mode toggle button', () => {
+    render(<App />);
+    const toggleButton = screen.getByRole('button', { name: /switch to dark mode/i });
+    expect(toggleButton).toBeInTheDocument();
+  });
+
+  test('toggles between dark and light mode', () => {
+    render(<App />);
+    const toggleButton = screen.getByRole('button', { name: /switch to dark mode/i });
+    
+    // Initially in light mode
+    expect(toggleButton).toHaveAccessibleName('Switch to dark mode');
+    expect(toggleButton.textContent).toBe('🌙');
+    
+    // Click to switch to dark mode
+    fireEvent.click(toggleButton);
+    expect(toggleButton).toHaveAccessibleName('Switch to light mode');
+    expect(toggleButton.textContent).toBe('☀️');
+    
+    // Click again to switch back to light mode
+    fireEvent.click(toggleButton);
+    expect(toggleButton).toHaveAccessibleName('Switch to dark mode');
+    expect(toggleButton.textContent).toBe('🌙');
   });
 });
