@@ -1,34 +1,45 @@
-# 🏢 Fabrikam Enterprise Solutions
+# 🌍 Fabrikam Hello World
 
 [![Build Status](https://img.shields.io/badge/build-passing-brightgreen)](https://github.com/uplandprojects/Fabrikam)
-[![Version](https://img.shields.io/badge/version-2.1.0-blue)](https://github.com/uplandprojects/Fabrikam/releases)
+[![Version](https://img.shields.io/badge/version-1.0.0-blue)](https://github.com/uplandprojects/Fabrikam/releases)
 [![License](https://img.shields.io/badge/license-MIT-green)](LICENSE)
 
-Welcome to **Fabrikam Enterprise Solutions** - the next-generation cloud-native platform for modern business operations! 🚀
+A simple React "Hello World" application with dark/light mode toggle! 🚀
 
 ## 📖 Overview
 
-Fabrikam is a cutting-edge enterprise application designed to streamline business processes, enhance productivity, and drive digital transformation. Built with scalability and performance in mind, Fabrikam empowers organizations to manage their operations efficiently in today's fast-paced digital landscape.
+Fabrikam is a minimal React application that displays "Hello World" with a beautiful gradient design and theme switching capability. This project serves as a starter template for React development using webpack and Jest.
 
-## ✨ Key Features
+## ✨ Features
 
-- 🔐 **Enterprise-Grade Security** - Multi-factor authentication, end-to-end encryption, and role-based access control
-- ⚡ **Lightning Fast Performance** - Optimized for speed with advanced caching and CDN integration
-- 🌐 **Global Scalability** - Deploy across multiple regions with automatic load balancing
-- 📊 **Advanced Analytics** - Real-time dashboards and comprehensive reporting capabilities
-- 🔄 **Seamless Integrations** - Connect with 100+ third-party services and APIs
-- 📱 **Mobile-First Design** - Responsive interface that works beautifully on all devices
-- 🤖 **AI-Powered Insights** - Machine learning algorithms for predictive analytics
-- 🛠️ **Customizable Workflows** - Tailor the platform to your specific business needs
+- 🌓 **Dark/Light Mode Toggle** - Switch between dark and light themes
+- 🎨 **Gradient Styling** - Beautiful gradient text effect
+- ⚡ **Fast Development** - Hot reloading with webpack dev server
+- 🧪 **Testing Ready** - Jest and React Testing Library configured
+
+## 📁 Project Structure
+
+```
+Fabrikam/
+├── public/              # Static assets
+│   ├── index.html       # HTML template
+│   └── favicon.svg      # Application favicon
+├── src/                 # Source files
+│   ├── App.js           # Main React component
+│   ├── App.test.js      # Component tests
+│   └── index.js         # Application entry point
+├── package.json         # Project dependencies and scripts
+├── webpack.config.js    # Webpack configuration
+├── jest.config.js       # Jest test configuration
+├── jest.setup.js        # Jest setup file
+└── .babelrc             # Babel configuration
+```
 
 ## 🚀 Getting Started
 
 ### Prerequisites
 
 - Node.js 18.x or higher
-- Docker 20.x or higher
-- Azure account (for cloud deployment)
-- 8GB RAM minimum (16GB recommended)
 
 ### 📥 Installation
 
@@ -42,86 +53,43 @@ cd Fabrikam
 # Install dependencies
 npm install
 
-# Configure environment variables
-cp .env.example .env
-
 # Start the development server
 npm run dev
 ```
 
-### 🔧 Configuration
-
-Edit the `.env` file with your specific settings:
-
-```env
-FABRIKAM_API_KEY=YOUR_API_KEY_HERE
-FABRIKAM_DATABASE_URL=YOUR_DATABASE_CONNECTION_STRING
-FABRIKAM_REGION=us-west-2
-```
-
 ## 💻 Usage
 
-Once installed, access the Fabrikam dashboard at `http://localhost:3000`
+Once installed, access the application at `http://localhost:3000`
 
-### Quick Start Example
-
-```javascript
-// This is a hypothetical example demonstrating the intended usage
-const Fabrikam = require('fabrikam-sdk');
-
-const client = new Fabrikam({
-  apiKey: 'your-api-key',
-  region: 'us-west-2'
-});
-
-// Create a new project
-const project = await client.projects.create({
-  name: 'My Awesome Project',
-  description: 'Building something amazing'
-});
-
-console.log('Project created:', project.id);
-```
-
-## 🏗️ Architecture
-
-Fabrikam follows a modern microservices architecture:
-
-- **Frontend**: React 18 with TypeScript
-- **Backend**: Node.js with Express
-- **Database**: PostgreSQL with Redis caching
-- **Message Queue**: RabbitMQ for async processing
-- **Storage**: Azure Blob Storage
-- **Monitoring**: Application Insights and Prometheus
+Click the sun/moon icon in the top right corner to toggle between light and dark modes.
 
 ## 🧪 Testing
 
 ```bash
 # Run unit tests
 npm test
-
-# Run integration tests
-npm run test:integration
-
-# Run end-to-end tests
-npm run test:e2e
-
-# Generate coverage report
-npm run test:coverage
 ```
 
-## 📚 Documentation
+## 🏗️ Building
 
-For detailed documentation, visit our [Documentation Portal](https://docs.fabrikam.com)
+```bash
+# Build for production
+npm run build
+```
 
-- [API Reference](https://docs.fabrikam.com/api)
-- [User Guide](https://docs.fabrikam.com/guide)
-- [Architecture Deep Dive](https://docs.fabrikam.com/architecture)
-- [Best Practices](https://docs.fabrikam.com/best-practices)
+The production build will be output to the `dist/` directory.
+
+## 🛠️ Tech Stack
+
+- **React 18** - UI library
+- **Webpack 5** - Module bundler
+- **Babel** - JavaScript compiler
+- **Jest** - Testing framework
+- **React Testing Library** - Component testing utilities
 
 ## 🤝 Contributing
 
-We welcome contributions from the community! Please read our [Contributing Guidelines](CONTRIBUTING.md) before submitting a pull request.
+We welcome contributions! Please feel free to submit a Pull Request.
 
 ### Development Workflow
 
@@ -131,32 +99,9 @@ We welcome contributions from the community! Please read our [Contributing Guide
 4. Push to the branch (`git push origin feature/amazing-feature`)
 5. Open a Pull Request
 
-## 📝 Changelog
-
-See [CHANGELOG.md](CHANGELOG.md) for a list of changes in each version.
-
-## 🐛 Support & Issues
-
-Encountered a bug? Have a feature request? Please [open an issue](https://github.com/uplandprojects/Fabrikam/issues) on GitHub.
-
-For enterprise support, contact us at support@fabrikam.com
-
-## 👥 Team
-
-Built with ❤️ by the Fabrikam Engineering Team
-
-- **Product Owner**: Sarah Johnson
-- **Lead Architect**: Michael Chen
-- **DevOps Lead**: Jessica Martinez
-- **Security Lead**: David Thompson
-
 ## 📄 License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## 🌟 Acknowledgments
-
-Special thanks to all our contributors and the open-source community for making Fabrikam possible!
 
 ---
 
